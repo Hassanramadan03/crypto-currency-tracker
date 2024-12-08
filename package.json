@@ -1,0 +1,30 @@
+{
+  "name": "crypto-price-tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+
+    "start:dht": "hyperdht --bootstrap --host 127.0.0.1 --port 30001",
+    "start:server": "node src/server/server.js",
+    "start:client": "KEY=95260a5380d023add607a12f313fae7d2b23f2ba66e4f87115dd1389935b1897 node src/client/client.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@hyperswarm/rpc": "^3.3.2",
+    "hyperbee": "^2.20.7",
+    "hypercore": "^10.38.1",
+    "hyperdht": "^6.20.1",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "concurrently": "^9.1.0",
+    "jest": "^29.7.0"
+  }
+}
